@@ -1,0 +1,6 @@
+NA;AL;5
+NA;CA;5
+NA;GR;5
+NA;MX;5
+NA;SF;5
+NA;NY;5

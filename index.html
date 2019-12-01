@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ .Title }}</title>
+  </head>
+  <style>
+  *{
+      margin:0px;
+      padding:0px;
+  }  
+  .dropdown{
+    position:relative;
+    display:inline-block;
+  }
+  .button{
+    padding:10px 40px;
+    font-size:20px;
+  }
+  #drop-content a{
+    display:block; 
+    background:#dfdfdf;
+    color:black;
+    text-decoration: none;
+    padding:10px 36px;
+    margin-top: 2px;
+  }
+</style>
+  <body>
+    <h2>Country Fight</h2>
+
+    <head>
+       <script src ="comms.js"></script>
+       <script src ="Gameplay.js"></script> 
+    </head>
+      <div class="dropdown">
+        <button onclick="show_hide()" class="button">Alaska</button>
+        <div style = "display:none" id="drop-content">
+          <a href="#">Attack</a>
+          <a href="#">Donate</a>
+          <a href="#">Move</a>
+        </div> 
+      </div>
+  </body>
+</html>

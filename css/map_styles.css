@@ -1,0 +1,334 @@
+#moves {
+    position: relative;
+    width: 150;
+    bottom: 800;
+    left: 600;
+    font-family: sans-serif;
+    background-color: white;
+    border: none;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    z-index: 100;
+}
+
+#play {
+    position: relative;
+    bottom: 280;
+    background-color: white;
+    border: none;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    z-index: 101;
+}
+
+#num {
+    position: relative;
+    bottom: 280;
+    left: 900;    
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    z-index: 101;
+}
+
+#PO {
+    position: relative;
+    bottom: 280;
+    left: 235;    
+    background-color: white;
+    border: none;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    z-index: 102;
+}
+
+#map {
+    overflow-y: hidden;
+    position: relative;
+    left: 35;
+    height: 840;
+    width: 1400;
+}
+
+.country {
+    position: relative;
+    height: 15%;
+    outline: none;
+}
+
+#CA {
+    right: 30px;
+    top: 2px;
+    z-index: 1;
+}
+
+#NY {
+    left: 92px;
+    bottom: 30px;
+    height: 12%;
+    width: 9%;
+    z-index: 2;
+}
+
+#SF {
+    bottom: 45px;
+    left: 138px;
+    height: 10%;
+    width: 8%;
+    z-index: 3;
+}
+
+#ME {
+    bottom: 66px;
+    left: 165px;
+    height: 10%;
+    width: 10%;
+    z-index: 4;
+}
+
+#GR {
+    left: 300px;
+    top: 60px;
+    z-index: 5;
+}
+
+#VE {
+    height: 10%;
+    width: 6%;
+    left: 280px;
+    bottom: 88px;
+    z-index: 6;
+}
+
+#BR {
+    height: 10%;
+    width: 7%;
+    left: 323px;
+    bottom: 144px;
+    z-index: 7;
+}
+
+#PE {
+    height: 9%;
+    width: 6%;
+    left: 292px;
+    bottom: 320px;
+    z-index: 8;
+}
+
+#AG {
+    width: 5%;
+    left: 285px;
+    bottom: 140px;
+    z-index: 9;
+}
+
+#UK {
+    left: 560px;
+    bottom: 640px;
+    height: 12%;
+    width: 9%;
+    z-index: 10;
+}
+
+#RO {
+    left: 650px;
+    bottom: 690px;
+    z-index: 11;
+}
+
+#SC {
+    left: 734px;
+    bottom: 1140px;
+    height: 11%;
+    width: 11%;
+    z-index: 12;
+}
+
+#PR {
+    left: 761px;
+    bottom: 945px;
+    z-index: 13;
+}
+
+#RU {
+    left: 800px;
+    bottom: 860px;
+    z-index: 14;
+}
+
+#MI {
+    left: 822px;
+    bottom: 1540px;
+    z-index: 15;
+}
+
+#AF {
+    left: 850px;
+    bottom: 1130px;
+    height: 13%;
+    z-index: 16;
+}
+
+#PA {
+    left: 908px;
+    bottom: 1767px;
+    height: 11.5%;
+    z-index: 17;
+}
+
+#IN {
+    height: 13%;
+    left: 917px;
+    bottom: 1310px;
+    z-index: 18;
+}
+
+#SE {
+    height: 12%;
+    left: 955px;
+    bottom: 2035px;
+    z-index: 19;
+}
+
+#CH {
+    height: 16%;
+    width: 16%;
+    left: 947px;
+    bottom: 1265px;
+    z-index: 20;
+}
+
+#SI {
+    left: 860px;
+    bottom: 2060px;
+    z-index: 21;
+}
+
+#PL {
+    height: 10%;
+    left: 945px;
+    bottom: 1928px;
+    z-index: 22;
+}
+
+#UR {
+    height: 13%;
+    width: 13%;
+    left: 1073px;
+    bottom: 2276px;
+    z-index: 23;
+}
+
+#NR {
+    height: 10%;
+    left: 956px;
+    bottom: 1810px;
+    z-index: 24;
+}
+
+#JP {
+    height: 10%;
+    width: 7%;
+    left: 1150px;
+    bottom: 1450px;
+    z-index: 25;
+}
+
+#EG {
+    height: 10%;
+    width: 7%;
+    left: 760px;
+    bottom: 2673px;
+    z-index: 26;
+}
+
+#NA {
+    left: 685px;
+    bottom: 2205px;
+    z-index: 27;
+}
+
+#WA {
+    left: 790px;
+    bottom: 2347px;
+    z-index: 28;
+}
+
+#CN {
+    height: 8%;
+    width: 6%;
+    left: 757px;
+    bottom: 2224px;
+    z-index: 29;
+}
+
+#SA {
+    height: 7%;
+    left: 765px;
+    bottom: 2360px;
+    z-index: 30;
+}
+
+#MA {
+    height: 10%;
+    left: 860px;
+    bottom: 2420px;
+    z-index: 31;
+}
+
+#WO {
+    height: 10%;
+    left: 1000px;
+    bottom: 2650px;
+    z-index: 32;
+}
+
+#CO {
+    height: 10%;
+    left: 1003px;
+    bottom: 2837px;  
+    z-index: 33;
+}
+
+#EO {
+    left: 1086px;
+    bottom: 2732px;
+    z-index: 34;
+}
+
+#NG {
+    height: 7%;
+    left: 1050px;
+    bottom: 3000px;
+    z-index: 35;
+}

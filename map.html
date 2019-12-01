@@ -1,0 +1,165 @@
+<html>
+    <title>WarAkshat (beta)</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/map_styles.css">
+    <body bgcolor="#1f3a93" >
+        <div id="map">
+        <iframe id="countries" src="/static/initial/countries.txt" onload="initMap();" style="display: none;"></iframe>
+        <script src="/static/js/game.js"></script>
+        <!--North_America-->
+        <div>
+            <label name="GR" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/North_America/Greenland.png", id="GR", class="country" placeholder="0" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <label name="AL" style="position: absolute; z-index: 36;">0</label>
+        <input type="image" src="/static/map/North_America/Alaska.png", id="AL", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        <label name="CA" style="position: absolute; z-index: 36;">0</label>
+        <input type="image" src="/static/map/North_America/Canada.png", id="CA", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        <div>
+        <label name="SF" style="position: absolute; z-index: 36;">0</label>
+        <input type="image" src="/static/map/North_America/San_Francisco.png", id="SF", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        <label name="NY" style="position: absolute; z-index: 36;">0</label>
+        <input type="image" src="/static/map/North_America/New_York.png", id="NY", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div> 
+        <div>
+            <label name="ME" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/North_America/Mexico.png", id="ME", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <!--South_America-->
+        <div>
+            <label name="VE" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/South_America/Venezuela.png", id="VE", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="BR" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/South_America/Brazil.png", id="BR", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="AG" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/South_America/Argentina.png", id="AG", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="PE" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/South_America/Peru.png", id="PE", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <!--Europe-->
+        <div>
+            <label name="UK" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Europe/UK.png", id="UK", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="RO" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Europe/Rome.png", id="RO", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="RU" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Europe/Russia.png", id="RU", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="PR" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Europe/Prussia.png", id="PR", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <!--Asia-->
+        <div>
+            <label name="SC" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Europe/Viking.png", id="SC", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="AF" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Asia/Afganistan.png", id="AF", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="CH" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Asia/China.png", id="CH", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="IN" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Asia/India.png", id="IN", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="JP" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Asia/Japan.png", id="JP", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="MI" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Asia/Middle_East.png", id="MI", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="NR" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Asia/Northern_Russia.png", id="NR", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="PA" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Asia/Pablo.png", id="PA", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="PL" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Asia/Place.png", id="PL", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="SI" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Asia/Siberia.png", id="SI", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="SE" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Asia/South_East_Asia.png", id="SE", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="UR" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Asia/Ural.png", id="UR", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <!--Africa-->
+        <div>
+            <label name="NA" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Africa/North_Africa.png", id="NA", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="CN" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Africa/Central_Africa.png", id="CN", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="WA" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Africa/West_Africa.png", id="WA", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="SA" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Africa/South_Africa.png", id="SA", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="MA" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Africa/Madagascar.png", id="MA", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="EG" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Africa/Egypt.png", id="EG", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <!--Australia-->
+        <div>
+            <label name="WO" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Australia/West_Australia.png", id="WO", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="EO" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Australia/East_Australia.png", id="EO", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="CO" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Australia/Central_Australia.png", id="CO", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+        <div>
+            <label name="NG" style="position: absolute; z-index: 36;">0</label>
+            <input type="image" src="/static/map/Australia/New_Guinea.png", id="NG", class="country" onclick="click_country(this.id)" onmouseover="over(this.id)" onmouseleave="leave(this.id)"/>
+        </div>
+    </div>
+    <script>
+    init()
+    </script>
+    <div><button id="moves" onclick="document.getElementById('moves').innerHTML='Troops: 0'; troopers=0">Troops: 0</button></div>
+    <button id = "play" onclick = "attack()" onload="colours()"> attack</button>
+    <button id = "play" onclick = "donate()">donate</button>
+    <button id = "play" onclick = "move()">move</button>
+    <button id = "num" onclick = "add(10)">10</button>
+    <button id = "num" onclick = "add(5)">5</button>
+    <button id = "num" onclick = "add(1)">1</button>
+    <button name="PO" id="PO" onclick="source='PO';">0</button>
+    </body>
+</html>

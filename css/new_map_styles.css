@@ -1,0 +1,397 @@
+.moves {
+    color: white;
+    position: relative;
+    width: 450;
+    bottom: 550;
+    left: 400;
+    font-family: sans-serif;
+    border: none;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    z-index: 100;
+}
+
+#execute {
+    width: 150;
+}
+
+.play {
+    position: relative;
+    bottom: 80;
+    left: 20;
+    border: none;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    z-index: 101;
+}
+
+.num {
+    position: relative;
+    bottom: 80;
+    left: 850;    
+    border: none;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    z-index: 101;
+}
+
+#map {
+    position: relative;
+    width: 1152px;
+    height: 576px;
+    margin-left: 100px;
+}
+
+#PO {
+    position: relative;
+    bottom: 80;
+    left: 120;    
+    border: none;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    z-index: 102;
+}
+
+.country {
+    position: absolute;
+    height: 15%;
+    width: 15%;
+}
+
+#GR  {
+    height: 13.5%;
+    width: 15%;
+    position: absolute;
+    left: 300px;
+    top: 100px;
+}
+
+#AL {
+    height: 16%;
+    width: 15%;
+    position: absolute;
+    left: 39px;
+    top: 156.5px;
+}
+
+#CA {
+    height: 16.75%;
+    width: 15%;
+    position: absolute;
+    left: 174px;
+    top: 155px;
+}
+
+#NY {
+    height: 13.25%;
+    width: 15%;
+    position: absolute;
+    left: 166px;
+    top: 231px;
+}
+
+#SF {
+    height: 11.5%;
+    width: 15%;
+    position: absolute;
+    left: 108.5px;
+    top: 232px;
+}
+
+#ME {
+    height: 12%;
+    width: 15%;
+    position: absolute;
+    left: 137px;
+    top: 286px;
+}
+
+#VE {
+    height: 11.5%;
+    width: 15%;
+    position: absolute;
+    left: 197px;
+    top: 344px;
+}
+
+
+#BR {
+    height: 11.5%;
+    width: 15%;
+    position: absolute;
+    left: 237px;
+    top: 367.5px;
+}
+
+#PE {
+    height: 11.5%;
+    width: 15%;
+    position: absolute;
+    left: 207px;
+    top: 393px;
+}
+
+#AG  {
+    height: 13.5%;
+    width: 15%;
+    position: absolute;
+    left: 194.5px;
+    top: 446px;
+}
+
+#CN  {
+    height: 8%;
+    width: 36%;
+    position: absolute;
+    left: 417px;
+    top: 392px;
+}
+
+#SA  {
+    height: 7.5%;
+    width: 36%;
+    position: absolute;
+    left: 424px;
+    top: 432px;
+}
+
+#NA {
+    height: 16.5%;
+    width: 36%;
+    position: absolute;
+    left: 377px;
+    top: 310px;
+}
+
+#EG  {
+    height: 9.5%;
+    width: 36%;
+    position: absolute;
+    left: 426px;
+    top: 310px;
+}
+
+#MA {
+    height: 10.5%;
+    width: 36%;
+    position: absolute;
+    left: 486px;
+    top: 442px;
+}
+
+#WA  {
+    height: 15.5%;
+    width: 36%;
+    position: absolute;
+    left: 448px;
+    top: 351px;
+}
+
+#UK  {
+    height: 11%;
+    width: 15%;
+    position: absolute;
+    left: 425px;
+    top: 193.5px;
+}
+
+#SI  {
+    height: 18.5%;
+    width: 15%;
+    position: absolute;
+    left: 659px;
+    top: 164.5px;
+}
+
+#UR  {
+    height: 13.5%;
+    width: 15%;
+    position: absolute;
+    left: 846px;
+    top: 181.5px;
+}
+
+#RU  {
+    height: 16.5%;
+    width: 36%;
+    position: absolute;
+    left: 463px;
+    top: 195px;
+}
+
+#PL  {
+    height: 10.5%;
+    width: 15%;
+    position: absolute;
+    left: 729px;
+    top: 209px;
+}
+
+#SC  {
+    height: 10.5%;
+    width: 36%;
+    position: absolute;
+    left: 431px;
+    top: 186px;
+}
+
+#IN  {
+    height: 12.5%;
+    width: 36%;
+    position: absolute;
+    left: 570px;
+    top: 308px;
+}
+
+#MI  {
+    height: 16.7%;
+    width: 36%;
+    position: absolute;
+    left: 488px;
+    top: 276px;
+}
+
+#SE  {
+    height: 12.5%;
+    width: 36%;
+    position: absolute;
+    left: 601px;
+    top: 293px;
+}
+
+#CO  {
+    height: 11%;
+    width: 15%;
+    position: absolute;
+    left: 792px;
+    top: 461px;
+}
+
+#WO  {
+    height: 10.5%;
+    width: 36%;
+    position: absolute;
+    left: 664px;
+    top: 446px;
+}
+
+#EO  {
+    height: 15.5%;
+    width: 36%;
+    position: absolute;
+    left: 724px;
+    top: 451px;
+}
+
+#RO  {
+    height: 13.5%;
+    width: 36%;
+    position: absolute;
+    left: 376px;
+    top: 233px;
+}
+
+#CH  {
+    height: 20%;
+    width: 36%;
+    position: absolute;
+    left: 634.9px;
+    top: 229px;
+}
+
+#PR  {
+    height: 15%;
+    width: 36%;
+    position: absolute;
+    left: 430.5px;
+    top: 229px;
+}
+
+#JP  {
+    height: 12.5%;
+    width: 36%;
+    position: absolute;
+    left: 769px;
+    top: 298px;
+}
+
+#PA  {
+    height: 13.95%;
+    width: 36%;
+    position: absolute;
+    left:548.65px;
+    top: 261.4px;
+}
+
+#AF  {
+    height: 16%;
+    width: 36%;
+    position: absolute;
+    left: 509.4px;
+    top: 251px;
+}
+
+#NG  {
+    height: 10.5%;
+    width: 36%;
+    position: absolute;
+    left: 696px;
+    top: 365px;
+}
+
+#NR  {
+    height: 11%;
+    width: 15%;
+    position: absolute;
+    left: 738.5px;
+    top: 159px;
+}
+
+path {
+    stroke: black;
+    stroke-width: 300px;
+    pointer-events: fill;
+}
+
+svg {
+    pointer-events: none;
+}
+
+label {
+    pointer-events: none;
+    font-weight: 10;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus {outline:none !important;}
