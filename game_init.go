@@ -152,7 +152,7 @@ func timeBased() time.Duration {
 }
 
 func delayBased() time.Duration {
-	return time.Second * 30
+	return time.Second * 45
 }
 
 func allocateCountries(numPlayers, countries int) {
