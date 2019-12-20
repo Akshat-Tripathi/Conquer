@@ -1,8 +1,8 @@
-bffd;#1f3a93;18
-flkn;#26a65b;3
-dldb;#f4d03f;0
-isdv;#d35400;0
-sdlr;#663399;9
-kcxt;#be90d4;1
-qrst;#d91e18;9
-hkgo;#4ecdc4;0
+bffd;#1f3a93;22
+flkn;#26a65b;22
+dldb;#f4d03f;22
+isdv;#d35400;22
+sdlr;#663399;22
+kcxt;#be90d4;12
+qrst;#d91e18;22
+hkgo;#4ecdc4;22

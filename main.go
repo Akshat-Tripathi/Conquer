@@ -11,10 +11,12 @@ import (
 )
 
 const (
-	timing = 19
+	timing   = 19
+	duration = 10
 )
 
 var (
+	players  = 8
 	upgrader = websocket.Upgrader{
 		CheckOrigin: func(r *http.Request) bool {
 			return true
@@ -41,7 +43,7 @@ func getOutboundIP() net.IP {
 func main() {
 	fmt.Println(getOutboundIP().String())
 	start := flag.Bool("start", false, "Is this the start of the game?")
-	numPlayer := flag.Int("num", 7, "How many players are playing?")
+	numPlayer := flag.Int("num", players, "How many players are playing?")
 	numCountries := flag.Int("countries", 4, "How many countries does everyone get?")
 	rapid := flag.Bool("rapid", false, "Enable rapid fire mode?")
 	flag.Parse()

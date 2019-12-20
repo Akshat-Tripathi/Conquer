@@ -85,7 +85,7 @@ func (h *hub) send(act action) {
 }
 
 func (h *hub) init() {
-	for i := 0; i < 7; i++ {
+	for i := 0; i < players; i++ {
 		h.users[accounts[i]] = &user{name: accounts[i], clients: make(map[*websocket.Conn]bool), outputStream: make(chan action)}
 		go h.users[accounts[i]].init("/ws/" + accounts[i])
 	}

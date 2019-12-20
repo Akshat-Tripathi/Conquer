@@ -27,7 +27,7 @@ var (
 
 func countCountries() map[string]int {
 	countryCounts := make(map[string]int)
-	cc := make([]int, 7)
+	cc := make([]int, players)
 	for i, v := range accounts {
 		countryCounts[v] = i
 	}
@@ -45,7 +45,7 @@ func countCountries() map[string]int {
 
 func countContinents() map[string]int {
 	counts := make(map[string]int)
-	cc := make([]int, 7)
+	cc := make([]int, players)
 	for i, v := range accounts {
 		counts[v] = i
 	}
@@ -146,9 +146,12 @@ func timeBased() time.Duration {
 	now := time.Now()
 	current := now.Hour()
 	if current < timing {
-		return time.Until(time.Date(now.Year(), now.Month(), now.Day(), timing, 30, 0, 0, time.Local))
+		return time.Until(time.Date(now.Year(), now.Month(), now.Day(), timing, 0, 0, 0, time.Local))
 	}
-	return time.Until(time.Date(now.Year(), now.Month(), now.Day()+1, timing, 30, 0, 0, time.Local))
+	if time.Until(time.Date(now.Year(), now.Month(), now.Day(), timing, duration, 0, 0, time.Local)) > 0 {
+		return time.Minute
+	}
+	return time.Until(time.Date(now.Year(), now.Month(), now.Day()+1, timing, 0, 0, 0, time.Local))
 }
 
 func delayBased() time.Duration {
