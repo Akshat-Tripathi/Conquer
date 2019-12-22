@@ -36,7 +36,7 @@ func authenticator(w http.ResponseWriter, r *http.Request) {
 
 //Gets the accounts, with their statuses as 0 and then converts them to their colours
 //The colours are for the browser
-func getAccounts() ([]string, map[string]int, map[string]string, map[string]int) {
+func getAccounts() ([]string, map[string]string, map[string]int) {
 	raw, err := ioutil.ReadFile("accounts.txt")
 	if err != nil {
 		log.Println(err)
@@ -59,7 +59,7 @@ func getAccounts() ([]string, map[string]int, map[string]string, map[string]int)
 		}
 		pots[name] = p
 	}
-	return accounts, state, colour, pots
+	return accounts, colour, pots
 }
 
 func saveAccounts() {

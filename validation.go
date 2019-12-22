@@ -46,14 +46,20 @@ func (a *action) attack() {
 	for i := 0; i < de; i++ {
 		defend[i] = rand.Intn(6)
 	}
-	attac = sort(attac)
+
 	defend = sort(defend)
 
-	for i := 0; i < de; i++ {
-		attac[i] -= defend[i]
+	for len(defend) != 0 {
+		v := defend[0]
+		for i := range attac {
+			if v >= i {
+				a.Numsrc++
+				break
+			}
+		}
+		defend = defend[1:]
 	}
 
-	a.Numsrc = -count(attac)
 	a.Numdest = -(a.Numsrc + at)
 
 	countryMap[a.Src].population += a.Numsrc
@@ -100,7 +106,6 @@ func validate(a action) bool {
 		return false
 	}
 	if a.Src != "PO" {
-		fmt.Println(a.Player, a.Src)
 		if countryMap[a.Src].owner != a.Player {
 			return false
 		}
@@ -115,7 +120,6 @@ func validate(a action) bool {
 		}
 		return false
 	} else if a.MoveType == 1 {
-		fmt.Println(canDonate(a))
 		if canDonate(a) {
 			a.donate()
 			return true
@@ -215,7 +219,7 @@ func sort(arr []int) []int {
 	if len(arr) == 1 {
 		return arr
 	}
-	ret := make([]int, 1)
+
 	min := arr[0]
 	if len(arr) == 2 {
 		if min < arr[1] {
@@ -223,6 +227,8 @@ func sort(arr []int) []int {
 		}
 		return []int{arr[1], min}
 	}
+
+	ret := make([]int, 1)
 	dex := 0
 	for i, v := range arr[1:] {
 		if min > v {
@@ -233,13 +239,4 @@ func sort(arr []int) []int {
 	ret[0] = min
 	ret = append(ret, sort(append(arr[:dex], arr[dex+1:]...))...)
 	return ret
-}
-
-func count(arr []int) int {
-	for i, v := range arr {
-		if v > 0 {
-			return i
-		}
-	}
-	return len(arr)
 }

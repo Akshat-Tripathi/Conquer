@@ -21,9 +21,6 @@ func game(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	sendPots(id.Value)
-	if status[id.Value] == -1 {
-		http.Redirect(w, r, "/lose", http.StatusFound)
-	}
 	t.Execute(w, nil)
 }
 

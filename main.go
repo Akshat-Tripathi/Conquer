@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	timing   = 19
+	timing   = 17
 	duration = 10
 )
 
@@ -22,10 +22,10 @@ var (
 			return true
 		},
 	}
-	countryMap                     = loadCountries()
-	accounts, status, hidden, pots = getAccounts()
-	sender                         = hub{make(map[string]*user)}
-	winner                         = ""
+	countryMap             = loadCountries()
+	accounts, hidden, pots = getAccounts()
+	sender                 = hub{make(map[string]*user)}
+	winner                 = ""
 )
 
 func getOutboundIP() net.IP {
@@ -65,5 +65,6 @@ func main() {
 	http.HandleFunc("/winner", win)
 	http.HandleFunc("/lose", lose)
 	http.HandleFunc("/wrong_login", badLogin)
-	log.Fatal(http.ListenAndServe(getOutboundIP().String()+":8080", nil))
+	//log.Fatal(http.ListenAndServe(getOutboundIP().String()+":8080", nil))
+	log.Fatal(http.ListenAndServe("192.168.1.16:80", nil))
 }

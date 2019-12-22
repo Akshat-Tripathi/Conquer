@@ -7,13 +7,21 @@ import (
 )
 
 var (
-	bonus = map[string]int{
+	/*bonus = map[string]int{
 		"Africa":        3,
 		"Asia":          7,
 		"North America": 5,
 		"South America": 2,
 		"Australia":     2,
 		"Europe":        5,
+	}*/
+	bonus = map[string]int{
+		"Africa":        2,
+		"Asia":          4,
+		"North America": 3,
+		"South America": 1,
+		"Australia":     1,
+		"Europe":        3,
 	}
 	continents = map[string][]string{
 		"Africa":        []string{"NA", "WA", "CN", "MA", "EG", "SA"},
@@ -36,7 +44,6 @@ func countCountries() map[string]int {
 			cc[countryCounts[v.owner]]++
 		}
 	}
-	//fmt.Println(cc, countryCounts)
 	for k, v := range countryCounts {
 		countryCounts[k] = cc[v]
 	}
@@ -75,7 +82,7 @@ func calculate() map[string]int {
 	count := countCountries()
 	m := make(map[string]int)
 	for _, v := range accounts {
-		m[v] = 3 + cont[v] + count[v]/3
+		m[v] = 3 + cont[v] + count[v]/6
 	}
 	return m
 }
@@ -84,14 +91,6 @@ func winCondition() {
 	for _, v := range accounts {
 		if countCountries()[v] >= 35 {
 			winner = v
-		}
-	}
-}
-
-func loseCondition() {
-	for _, v := range accounts {
-		if countCountries()[v] < 0 {
-			status[v] = -1
 		}
 	}
 }
@@ -110,7 +109,6 @@ func sendPots(player string) {
 func housekeeping() {
 	for {
 		winCondition()
-		loseCondition()
 		time.Sleep(time.Minute)
 	}
 }
@@ -118,7 +116,7 @@ func housekeeping() {
 func addPot(start, rapid bool) {
 	if start {
 		for k := range pots {
-			pots[k] = 10
+			pots[k] = 5
 		}
 	}
 	saveAccounts()

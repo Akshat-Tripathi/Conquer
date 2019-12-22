@@ -51,6 +51,8 @@ func (u *user) handler(w http.ResponseWriter, r *http.Request) {
 				Numsrc:   -1,
 				Numdest:  -1,
 			})
+		} else {
+			//Insert save code here
 		}
 	}
 }
