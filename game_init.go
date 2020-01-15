@@ -7,22 +7,22 @@ import (
 )
 
 var (
-	/*bonus = map[string]int{
+	bonus = map[string]int{
 		"Africa":        3,
 		"Asia":          7,
-		"North America": 5,
+		"North America": 4,
 		"South America": 2,
 		"Australia":     2,
 		"Europe":        5,
-	}*/
-	bonus = map[string]int{
+	}
+	/*bonus = map[string]int{
 		"Africa":        2,
 		"Asia":          4,
 		"North America": 3,
 		"South America": 1,
 		"Australia":     1,
 		"Europe":        3,
-	}
+	}*/
 	continents = map[string][]string{
 		"Africa":        []string{"NA", "WA", "CN", "MA", "EG", "SA"},
 		"Asia":          []string{"IN", "MI", "UR", "SI", "NR", "PL", "CH", "JP", "AF", "SE", "PA"},
@@ -82,17 +82,10 @@ func calculate() map[string]int {
 	count := countCountries()
 	m := make(map[string]int)
 	for _, v := range accounts {
-		m[v] = 3 + cont[v] + count[v]/6
+		m[v] = 3 + cont[v] + count[v]/3
+		//fmt.Println(v, m[v])
 	}
 	return m
-}
-
-func winCondition() {
-	for _, v := range accounts {
-		if countCountries()[v] >= 35 {
-			winner = v
-		}
-	}
 }
 
 func sendPots(player string) {
@@ -104,13 +97,6 @@ func sendPots(player string) {
 		Numdest:  pots[player] - 1,
 		MoveType: 2,
 	})
-}
-
-func housekeeping() {
-	for {
-		winCondition()
-		time.Sleep(time.Minute)
-	}
 }
 
 func addPot(start, rapid bool) {

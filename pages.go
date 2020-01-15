@@ -33,8 +33,3 @@ func badLogin(w http.ResponseWriter, r *http.Request) {
 func win(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, winner+" wins")
 }
-
-//Lose page
-func lose(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "YOU LOSE")
-}

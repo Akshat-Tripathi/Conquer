@@ -377,7 +377,7 @@
 
 path {
     stroke: black;
-    stroke-width: 300px;
+    stroke-width: 0px;
     pointer-events: fill;
 }
 

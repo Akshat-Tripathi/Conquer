@@ -53,7 +53,6 @@ func main() {
 	}
 	saveCountries(countryMap)
 	sender.init()
-	go housekeeping()
 	go addPot(*start, *rapid)
 
 	http.Handle("/static/css/", http.StripPrefix("/static/css/", http.FileServer(http.Dir("css/"))))
@@ -63,8 +62,7 @@ func main() {
 	http.HandleFunc("/", game)
 	http.HandleFunc("/login/", authenticator)
 	http.HandleFunc("/winner", win)
-	http.HandleFunc("/lose", lose)
 	http.HandleFunc("/wrong_login", badLogin)
-	//log.Fatal(http.ListenAndServe(getOutboundIP().String()+":8080", nil))
-	log.Fatal(http.ListenAndServe("192.168.1.16:80", nil))
+	log.Fatal(http.ListenAndServe(getOutboundIP().String()+":8080", nil))
+	//log.Fatal(http.ListenAndServe("192.168.1.16:80", nil))
 }

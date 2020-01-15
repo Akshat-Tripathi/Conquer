@@ -1,8 +1,8 @@
-isdv;#d35400;0
-sdlr;#663399;0
-kcxt;#be90d4;0
-qrst;#d91e18;0
 hkgo;#4ecdc4;0
-bffd;#1f3a93;0
+bffd;#1f3a93;1
 flkn;#26a65b;0
 dldb;#f4d03f;0
+isdv;#d35400;47
+sdlr;#663399;47
+kcxt;#be90d4;47
+qrst;#d91e18;0

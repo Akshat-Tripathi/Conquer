@@ -38,7 +38,7 @@ func loadCountries() map[string]*country {
 	return countries
 }
 
-//Saves the contries to both the server and browser version
+//Saves the countries to both the server and browser version
 //The browser version contains colours instead of ids for security
 func saveCountries(m map[string]*country) {
 	var str string     //Where the stringified version will be saved

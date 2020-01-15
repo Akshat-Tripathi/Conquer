@@ -21,6 +21,7 @@ type user struct {
 }
 
 func (u *user) init(path string) {
+	time.Sleep(time.Millisecond * 100)
 	http.HandleFunc(path, u.handler)
 	go u.readSend()
 }
@@ -42,7 +43,7 @@ func (u *user) handler(w http.ResponseWriter, r *http.Request) {
 			break
 		}
 		fmt.Println(act)
-		if !validate(act) {
+		if act.Player != u.name || !validate(act) {
 			ws.WriteJSON(action{
 				Player:   "admin",
 				Src:      "SS",

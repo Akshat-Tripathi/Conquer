@@ -47,28 +47,29 @@ func (a *action) attack() {
 		defend[i] = rand.Intn(6)
 	}
 
+	attac = sort(attac)
 	defend = sort(defend)
-
-	for len(defend) != 0 {
-		v := defend[0]
-		for i := range attac {
-			if v >= i {
-				a.Numsrc++
-				break
-			}
+	fmt.Println(attac, defend)
+	for k, v := range defend {
+		if attac[k] <= v {
+			a.Numsrc--
+		} else {
+			a.Numdest--
 		}
-		defend = defend[1:]
 	}
-
-	a.Numdest = -(a.Numsrc + at)
 
 	countryMap[a.Src].population += a.Numsrc
 	countryMap[a.Dest].population += a.Numdest
+	fmt.Println(a.Numdest, a.Numsrc)
 	//fmt.Println("attacking", a.Numdest, countryMap[a.Dest].population)
 	if countryMap[a.Dest].population < 0 {
 		a.Numdest -= countryMap[a.Dest].population
 		countryMap[a.Dest].population = 0
 		//fmt.Println("conquering", a.Numdest, countryMap[a.Dest].population)
+		if countCountries()[a.Player] >= 35 {
+			winner = a.Player
+			fmt.Println(a.Player + " wins!")
+		}
 		sender.send(*a)
 		a.attack()
 		return
@@ -190,6 +191,9 @@ func canMove(a action) bool {
 		return false
 	}
 	if countryMap[a.Dest].owner != a.Player {
+		if a.Src == "PO" {
+			return !(a.Numdest > pots[a.Player])
+		}
 		fmt.Println("Player does not own territory")
 		return false
 	}
@@ -200,10 +204,7 @@ func canMove(a action) bool {
 		}
 		return in(countryMap[a.Src].neighbours, a.Dest)
 	}
-	if a.Numdest > pots[a.Player] {
-		return false
-	}
-	return true
+	return !(a.Numdest > pots[a.Player])
 }
 
 func in(list []string, item string) bool {
@@ -220,23 +221,23 @@ func sort(arr []int) []int {
 		return arr
 	}
 
-	min := arr[0]
+	max := arr[0]
 	if len(arr) == 2 {
-		if min < arr[1] {
-			return []int{min, arr[1]}
+		if max > arr[1] {
+			return []int{max, arr[1]}
 		}
-		return []int{arr[1], min}
+		return []int{arr[1], max}
 	}
 
 	ret := make([]int, 1)
 	dex := 0
 	for i, v := range arr[1:] {
-		if min > v {
-			min = v
+		if max < v {
+			max = v
 			dex = i + 1
 		}
 	}
-	ret[0] = min
+	ret[0] = max
 	ret = append(ret, sort(append(arr[:dex], arr[dex+1:]...))...)
 	return ret
 }

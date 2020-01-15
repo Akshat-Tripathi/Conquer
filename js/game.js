@@ -219,14 +219,14 @@ var locations = {
     "AL": "Alaska",
     "CA": "Canada",
     "GR": "Greenland",
-    "SF": "Western USA",
-    "NY": "Eastern USA",
+    "SF": "the Western USA",
+    "NY": "the Eastern USA",
     "ME": "Mexico",
     "VE": "Venezuela",
     "PE": "Peru",
     "BR": "Brazil",
     "AG": "Argentina",
-    "UK": "United Kingdom",
+    "UK": "the United Kingdom",
     "RO": "Rome 2.0",
     "PR": "Prussia",
     "RU": "Russia",
@@ -235,7 +235,7 @@ var locations = {
     "NR": "Northern Russia",
     "PL": "Place",
     "UR": "Kamchatka",
-    "MI": "Middle East",
+    "MI": "the Middle East",
     "AF": "Afganistan",
     "PA": "Pablo",
     "IN": "India",
@@ -287,14 +287,18 @@ function process() {
 function attack() {
     if (source != "") {
         if (source == "PO") {
-            return
+            alert("Cannot attack from base")
         }
         if(dest != "") {
             a = new action(player, source, dest, 0, 0, 0)
             actionTaken = "Attacking"
             updateUI()
             act = a
+        } else {
+            alert("No destination selected")
         }
+    } else {
+        alert("No source selected")
     }
 }
 
@@ -304,6 +308,16 @@ function donate() {
         actionTaken="Donating"
         updateUI()
         act = a
+    } else {
+        if (troopers == 0) {
+            alert("Moving 0 troops")
+        }
+        if (source == "") {
+            alert("No source selected")
+        }
+        if (dest == "") {
+            alert("No destination selected")
+        }
     }
 }
 
@@ -314,12 +328,21 @@ function move() {
         updateUI()
         act = a
     } else {
-        alert("Invalid move")
+        if (troopers == 0) {
+            alert("Moving 0 troops")
+        }
+        if (source == "") {
+            alert("No source selected")
+        }
+        if (dest == "") {
+            alert("No destination selected")
+        }
     }
 }
 
 function add(troops){
     troopers += troops
+    actionTaken = "Moving"
     updateUI()
 }
 
